@@ -9,11 +9,13 @@ const repetitions = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 
 const rounds = [1, 2, 3, 4, 5]
 const luck = 'Good luck!!!'
 
+//Picks a random index num and returns the corresponding item
 const randomIndexWord = (arr) => {
     let randomInd = Math.floor(Math.random() * arr.length);
     return arr[randomInd];
 };
 
+//Creates the movements and returns a string of it
 const movementGenerator = (arr) => {
     let movement1 = randomIndexWord(arr)
     let movement2 = randomIndexWord(arr)
@@ -32,7 +34,7 @@ ${movement3} for ${randomIndexWord(repetitions)} reps`)
     
 };
 
-
+//workout message content
 const word1 = randomIndexWord(greetings);
 const word2 = randomIndexWord(compliment);
 const word3 = hereIs;
@@ -42,9 +44,12 @@ const excercise = movementGenerator(movements);
 const roundNum = randomIndexWord(rounds);
 const word6 = luck;
 
-console.log(`${word1} ${word2} ${word3} ${word4} ${word5}
+
+//Prints the random workout message
+console.log(`${word1} ${word2} ${word3} ${word4} random ${word5}
+
 ${excercise}
 
 Rounds: ${roundNum}
 
-${word6}`)
+${word6}`);
